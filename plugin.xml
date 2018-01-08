@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            name="导出专用工艺装备组合家具明细表"
+            categoryId="com.connor.HXom051.ExportRelationshipOfProductWithModelCommand"
+            id="com.connor.HXom051.ExportRelationshipOfProductWithModelCommand">
+      </command>
+      <command
+            name="导出PPAP矩阵表"
+            categoryId="com.connor.HXom052.ExportPPAPMatrixCommand"
+            id="com.connor.HXom052.ExportPPAPMatrixCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.connor.HXom051.ExportRelationshipOfProductWithModelCommand"
+            class="com.connor.HXom051.ExportRelationshipOfProductWithModelHandler">
+      </handler>
+      <handler
+            commandId="com.connor.HXom052.ExportPPAPMatrixCommand"
+            class="com.connor.HXom052.ExportPPAPMatrixHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.connor.HXom051.ExportRelationshipOfProductWithModelCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="报  表"
+               mnemonic="M"
+               id="报 表">
+            <command
+                  commandId="com.connor.HXom051.ExportRelationshipOfProductWithModelCommand"
+                  mnemonic="S"
+                  id="com.connor.HXom051.ExportRelationshipOfProductWithModelMenuCommand">
+            </command>
+            <command
+                  commandId="com.connor.HXom052.ExportPPAPMatrixCommand"
+                  mnemonic="S"
+                  id="com.connor.HXom051.HXom052.ExportPPAPMatrixMenuCommand">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+</plugin>

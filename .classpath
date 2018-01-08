@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="poilib/classes12.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/commons-codec-1.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/commons-logging-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/jsr173_1.0_api.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/jxl_1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/poi-3.9-20121203.jar" sourcepath="C:/Users/ADMINI~1/AppData/Local/Temp/.org.sf.feeling.decompiler1515374780634/source/poi-3.9-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/poi-examples-3.9-20121203.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/poi-excelant-3.9-20121203.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/poi-ooxml-3.9-20121203.jar" sourcepath="C:/Users/ADMINI~1/AppData/Local/Temp/.org.sf.feeling.decompiler1515121021601/source/poi-ooxml-3.9-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/poi-ooxml-schemas-3.9-20121203.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/poi-scratchpad-3.9-20121203.jar"/>
+	<classpathentry exported="true" kind="lib" path="poilib/xmlbeans-2.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
