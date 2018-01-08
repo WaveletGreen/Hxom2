@@ -14,6 +14,13 @@
             categoryId="com.connor.HXom052.ExportPPAPMatrixCommand"
             id="com.connor.HXom052.ExportPPAPMatrixCommand">
       </command>
+      <!--
+     <command
+            name="查看时间表"
+            categoryId="com.connor.timeTester.ScheduleTaskCommand"
+            id="com.connor.timeTester.ScheduleTaskCommand">
+      </command>
+      -->
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
@@ -25,6 +32,12 @@
             commandId="com.connor.HXom052.ExportPPAPMatrixCommand"
             class="com.connor.HXom052.ExportPPAPMatrixHandler">
       </handler>
+      <!--
+      <handler
+            commandId="com.connor.timeTester.ScheduleTaskCommand"
+            class="com.connor.timeTester.ScheduleTaskHandler">
+      </handler>
+      -->
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
@@ -47,12 +60,28 @@
                   commandId="com.connor.HXom051.ExportRelationshipOfProductWithModelCommand"
                   mnemonic="S"
                   id="com.connor.HXom051.ExportRelationshipOfProductWithModelMenuCommand">
+                   <visibleWhen>
+               			<reference definitionId="com.teamcenter.rac.ui.inMainPerspective"></reference>
+            	   </visibleWhen>
             </command>
             <command
                   commandId="com.connor.HXom052.ExportPPAPMatrixCommand"
                   mnemonic="S"
                   id="com.connor.HXom051.HXom052.ExportPPAPMatrixMenuCommand">
+                    <visibleWhen>
+               			<reference definitionId="com.teamcenter.rac.ui.inMainPerspective"></reference>
+            	   </visibleWhen>
             </command>
+            <!--
+            <command
+                  commandId="com.connor.timeTester.ScheduleTaskCommand"
+                  mnemonic="S"
+                  id="com.connor.timeTester.ScheduleTaskMenuCommand">
+                   <visibleWhen>
+               			<reference definitionId="com.teamcenter.rac.ui.inMainPerspective"></reference>
+            	   </visibleWhen>
+            </command>
+            -->
          </menu>
       </menuContribution>
    </extension>

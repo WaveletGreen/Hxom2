@@ -54,8 +54,8 @@ public class ExportRelationshipOfProductWithModelOperation extends AbstractAIFOp
 	private ArrayList<TCComponentBOMLine> targetBomLine = null;
 	/** 模板最大行数 */
 	private int maxRwo = 0;
-	// 测试用
-	private final boolean debug = true;
+	// 测试用，建议测试打开
+	private final boolean debug = false;
 	/** 导出模板 */
 	private File exportFile = null;
 	/** 尾部行数 */
@@ -63,6 +63,7 @@ public class ExportRelationshipOfProductWithModelOperation extends AbstractAIFOp
 	/** 头部行数 */
 	private int headCount = 2;
 	/** 测试机上跟实机数据不一样，方便测试和发布 */
+	/** 测试中英文对应，测试的时候用英文可能出现ZPT和LJT，交付客户方是用中文，方便测试 */
 	private int modelselector = 0;
 	private final String[] TEST_MODEL = { "ZPT", "LJT" };
 	private final String[] PUBLISH_MODEL = { "装配图", "零件图" };
@@ -190,6 +191,19 @@ public class ExportRelationshipOfProductWithModelOperation extends AbstractAIFOp
 		boolean toRight = false;
 		Boolean isCreat = false;
 		maxRwo = sheet.getLastRowNum() - endCount - headCount;
+
+		if (exportBean.size() > 0) {
+			XSSFCell src = sheet.getRow(0).getCell(14);
+			XSSFCell productType = sheet.getRow(0).getCell(15);
+			XSSFCell productName = sheet.getRow(1).getCell(15);
+			productType.setCellValue(exportBean.get(0).getOfUsingNumber());
+			productType.setCellStyle(src.getCellStyle());
+			//String obName=HX3_ZPTRevision.getProperty("object_name");
+			productName.setCellValue(HX3_ZPTRevision.getProperty("object_name"));
+			productName.setCellStyle(src.getCellStyle());
+			
+		}
+
 		for (int i = 0; i < exportBean.size(); i++) {
 			ExportBean bean = exportBean.get(i);
 			XSSFRow row = null;
